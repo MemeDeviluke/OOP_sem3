@@ -19,7 +19,7 @@ public class StudentGroupService {
     }
     public List<Student> getSortedStudentGroupByFio(){
         List<Student> studentList = new ArrayList<>(students.getStudents());
-        studentList.sort(new StudentComparator());
+        studentList.sort(new UserComparator<Student>());
         return studentList;
     }
 }
